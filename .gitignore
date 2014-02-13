@@ -1,0 +1,12 @@
+# ignore backups
+*~ # emacs
+*.tgz
+*.gz
+*.xz
+
+# ignore tmp files
+*.t
+tmp/*
+
+# ignore logs
+*.log

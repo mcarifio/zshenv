@@ -1,20 +1,8 @@
 # Called by ~.zshrc
 here=$(readlink -f $0)
 
-# List of files sourced in this environment.
-typeset -A SOURCED=()
- 
-# Source a list of files, remembering them as you go.
-function sources {
-   for f in $*; do
-     source $f && SOURCED+=($f) 
-   done   
-}
-
 # Source all files in zshenv/zshrc.d
-source $here/zshrc.d/*
-
-
+sources $here/zshrc.d/*
 
 
 # ---- emacs ------
