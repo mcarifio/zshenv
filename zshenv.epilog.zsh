@@ -1,6 +1,12 @@
-# Called by ~.zshenv
+# Intended to be called by ~.zshenv at the end.
 
 here=$(readlink -f $0)
+
+# XXX This is in the wrong place
+# Load and run compinit
+autoload -U compinit
+compinit -i -d ~/.zcompdump
+
 
 # List of files sourced in this environment.
 typeset -A SOURCED=($0)
@@ -12,8 +18,11 @@ function sources {
    done   
 }
 
-# Source all files in zshenv/zshrc.d
-sources $here/zshenv.d/*
+
+
+
+# Source all files in zshenv/zshrc.d/*.source.zsh
+sources $here/zshenv.d/*.source.zsh
 
 
 
