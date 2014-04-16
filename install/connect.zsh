@@ -8,7 +8,7 @@ cat <EOF >> ~/.zshenv
 
 # Added by $0 on $(date)
 # Source ~/zshenv/zshenv.epilog.zsh iff it exists.
-[[ -r ~/zshenv/zshenv.epilog ]] && source ~/zshenv/zshenv.epilog.zsh
+[[ -r $here/zshenv.epilog ]] && source $here/zshenv.epilog.zsh
 EOF
 
 
@@ -16,7 +16,7 @@ cat <EOF >> ~/.zshrc
 
 # Added by $0 on $(date)
 # Source ~/zshenv/zshrc.epilog.zsh iff it exists.
-[[ -r ~/zshenv/zshrc.epilog ]] && source ~/zshenv/zshrc.epilog.zsh
+[[ -r $here/zshrc.epilog ]] && source $here/zshrc.epilog.zsh
 
 EOF
 
