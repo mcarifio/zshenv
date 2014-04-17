@@ -1,6 +1,6 @@
 # Intended to be called by ~.zshenv at the end.
 
-here=$(readlink -f $0)
+here=$(readlink -f ${0:h})
 
 # XXX This is in the wrong place
 # Load and run compinit
@@ -9,7 +9,8 @@ compinit -i -d ~/.zcompdump
 
 
 # List of files sourced in this environment.
-typeset -A SOURCED=($0)
+#typeset -a SOURCED
+#export SOURCED=($0)
  
 # Source a list of files, remembering them as you go.
 function sources {
